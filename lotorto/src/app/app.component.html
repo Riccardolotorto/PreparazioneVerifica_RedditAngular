@@ -1,0 +1,17 @@
+<form>
+  <div>
+    <label for="title">Cose inutili:</label>
+    <input name="title" #newtitle>
+  </div>
+  <br>
+  <div>
+    <label for="spam">Spam:</label>
+    <input name="spam" #newspam>
+  </div>
+  <br>
+  <button (click)="spammer(newtitle, newspam)">
+    Submit spam
+  </button>
+  <br>
+  <p *ngFor = "let elemento of articles">{{elemento}}</p>
+</form>
