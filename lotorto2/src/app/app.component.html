@@ -1,0 +1,23 @@
+<form>
+  <div>
+    <label for = "stringa">Inserire una stringa: </label>
+    <input name = "stringa" #newstringa>
+  </div>
+  <br>
+  <div>
+    <label for = "numero">Quante volte la vuoi vedere?</label>
+    <input name = " numero" #newnumero>
+  </div>
+  <br>
+  <div>
+    <button (click) = "spammer(newstringa, newnumero)">
+      Submit
+    </button>
+  </div> 
+</form>
+<br><br>
+<p *ngFor="let stringa of stringhe">
+  <app-nuovo [mess] = "stringa"></app-nuovo>
+</p>
+
+
