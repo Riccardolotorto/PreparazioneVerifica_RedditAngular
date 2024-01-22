@@ -11,7 +11,7 @@ export class AppComponent {
     let cont = Number(spam.value);
     for(let i:number = 0; i < cont; i++)  
     {
-      this.articles.push(title.value);
+      this.articles.push(title.value + " " + i);
     }
   return false;
   }

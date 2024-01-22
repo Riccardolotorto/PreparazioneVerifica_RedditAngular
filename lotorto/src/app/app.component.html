@@ -1,17 +1,22 @@
-<form>
-  <div>
-    <label for="title">Cose inutili:</label>
-    <input name="title" #newtitle>
+<form class="row">
+  <div class="col-auto">
+    <label for="title" class="form-label">Cose inutili:</label>
+    <input class="form-control" name="title" #newtitle>
   </div>
   <br>
-  <div>
-    <label for="spam">Spam:</label>
-    <input name="spam" #newspam>
+  <div class="col-auto">
+    <label for="spam" class="form-label">Spam:</label>
+    <input class="form-control" name="spam" #newspam>
   </div>
   <br>
-  <button (click)="spammer(newtitle, newspam)">
-    Submit spam
-  </button>
+  <div class="col-auto" style="padding-top: 30px;">
+    <button (click)="spammer(newtitle, newspam)" class="btn btn-primary">
+      Submit spam
+    </button>
+  </div>
   <br>
-  <p *ngFor = "let elemento of articles">{{elemento}}</p>
+  <br>
+  <p *ngFor = "let elemento of articles" class="fw-bold">
+    <app-messaggio-spam [messaggio] = "elemento"></app-messaggio-spam>
+  </p>
 </form>
