@@ -1,0 +1,23 @@
+<form style="padding-left: 30px;">
+  <div lass="mb-3">
+    <label for = "testo" class="form-label">Scrivi qualcosa di inutile</label>
+    <input name = "testo" style = "width: 18rem;" class="form-control" #newtesto>
+  </div>
+  <br>
+  <div lass="mb-3">
+    <label for = "spam" class="form-label">Quante volte vuoi visualizzarlo?</label>
+    <input name = "spam" style = "width: 18rem;" class="form-control" #newspam>
+  </div>
+  <br>
+  <div>
+    <button (click) = "ciclo(newtesto, newspam)" class="btn btn-primary">
+      Spammer
+    </button>
+  </div>
+  <br>
+  <br>
+  <p *ngFor="let stringa of stringhe" class="fw-bold">
+    <app-stampante [variabile]="stringa">
+    </app-stampante>
+  </p>
+</form>
